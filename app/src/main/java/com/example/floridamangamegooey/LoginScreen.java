@@ -34,12 +34,6 @@ public class LoginScreen extends AppCompatActivity {
         } else {
             toast.show();
         }
-        intent.putExtra("UserPassed", username);
-        intent.putExtra("UserPassed2", username);
-        intent.putExtra("UserPassed3", username);
-        intent.putExtra("UserPassed4", username);
-
-        //getExtra("UserPassed2")
     }
 
     public void loadScreen(View view) { //To have buttons able to call a method, the param must be (View view)

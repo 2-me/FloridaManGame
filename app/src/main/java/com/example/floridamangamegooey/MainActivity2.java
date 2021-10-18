@@ -10,14 +10,14 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_game_screen);
 
             // Get the Intent that started this activity and extract the string
             Intent intent = getIntent();
             String message = intent.getStringExtra(MainActivity.text);
 
             // Capture the layout's TextView and set the string as its text
-            TextView textView = findViewById(R.id.displayText);
+            TextView textView = findViewById(R.id.gameTitle);
             textView.setText(message);
 
 
