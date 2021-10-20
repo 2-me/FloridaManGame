@@ -6,128 +6,156 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <Button
-        android:id="@+id/ansButtonTL"
-        android:layout_width="150dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="28dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/ansButtonBL"
-        app:layout_constraintEnd_toStartOf="@+id/ansButtonTR"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:id="@+id/vertConstraint"
+        android:layout_width="414dp"
+        android:layout_height="733dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="1dp">
 
-    <Button
-        android:id="@+id/ansButtonTR"
-        android:layout_width="153dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="27dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/ansButtonBR"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="bottom"
+            android:text="Florida Man Game"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
-    <Button
-        android:id="@+id/ansButtonBR"
-        android:layout_width="153dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="320dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/ansButtonBL"
-        android:layout_width="150dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="346dp"
-        android:layout_marginEnd="227dp"
-        android:layout_marginBottom="321dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/correctTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct:     " />
 
-    <TextView
-        android:id="@+id/gameTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="68dp"
-        android:text="Florida Man Game"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/correctTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/correctNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0     "
+                android:textColor="#4CAF50"
+                android:textSize="34sp" />
 
-    <TextView
-        android:id="@+id/correctTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text="Correct: "
-        app:layout_constraintBottom_toBottomOf="@+id/correctNumber"
-        app:layout_constraintEnd_toStartOf="@+id/correctNumber"
-        app:layout_constraintTop_toTopOf="@+id/correctNumber"
-        app:layout_constraintVertical_bias="0.653" />
+            <TextView
+                android:id="@+id/wrongTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wrong:     "
+                android:textAlignment="textStart" />
 
-    <TextView
-        android:id="@+id/correctNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:layout_marginEnd="20dp"
-        android:text="0"
-        android:textColor="#F44336"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/headlineView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/wrongNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="0"
+                android:textColor="#F44336"
+                android:textSize="34sp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/wrongTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="Wrong: "
-        app:layout_constraintBottom_toBottomOf="@+id/correctNumber2"
-        app:layout_constraintEnd_toStartOf="@+id/correctNumber2"
-        app:layout_constraintTop_toTopOf="@+id/correctNumber2"
-        app:layout_constraintVertical_bias="0.653" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:gravity="clip_horizontal|center_horizontal|fill_vertical"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/correctNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:text="0"
-        android:textColor="#4CAF50"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/wrongTitle"
-        tools:layout_editor_absoluteY="73dp" />
+            <TextView
+                android:id="@+id/headlineView"
+                android:layout_width="325dp"
+                android:layout_height="86dp"
+                android:gravity="center"
+                android:text="Question about random topic that is in florida fille text?"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="fill_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ansButtonTR"
+                            android:layout_width="153dp"
+                            android:layout_height="65dp"
+                            android:insetRight="0"
+                            android:text="Button" />
+
+                        <Button
+                            android:id="@+id/ansButtonTL"
+                            android:layout_width="150dp"
+                            android:layout_height="64dp"
+                            android:text="Button" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ansButtonBR"
+                        android:layout_width="153dp"
+                        android:layout_height="65dp"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/ansButtonBL"
+                        android:layout_width="150dp"
+                        android:layout_height="64dp"
+                        android:text="Button" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/numQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question:"
-        app:layout_constraintBottom_toBottomOf="@+id/correctNumber3"
-        app:layout_constraintTop_toTopOf="@+id/correctNumber3"
-        app:layout_constraintVertical_bias="0.73"
-        tools:layout_editor_absoluteX="98dp" />
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="482dp" />
 
     <TextView
         android:id="@+id/correctNumber3"
@@ -136,10 +164,8 @@
         android:text="10"
         android:textColor="#3F51B5"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/correctNumber8"
-        app:layout_constraintTop_toTopOf="@+id/correctNumber8"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="174dp" />
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="463dp" />
 
     <TextView
         android:id="@+id/correctNumber8"
@@ -148,10 +174,8 @@
         android:text="/"
         android:textColor="#3F51B5"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/totalNumberQues"
-        app:layout_constraintTop_toTopOf="@+id/totalNumberQues"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="223dp" />
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="463dp" />
 
     <TextView
         android:id="@+id/totalNumberQues"
@@ -162,20 +186,5 @@
         android:textSize="34sp"
         tools:layout_editor_absoluteX="253dp"
         tools:layout_editor_absoluteY="463dp" />
-
-    <TextView
-        android:id="@+id/headlineView"
-        android:layout_width="325dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="43dp"
-        android:text="Question about random topic that is in florida fille text?"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/ansButtonTL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
