@@ -1,9 +1,11 @@
-package com.example.floridamangamegooey;
+package ViewControllers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.floridamangamegooey.R;
 
 public class MainActivity2 extends AppCompatActivity {
 

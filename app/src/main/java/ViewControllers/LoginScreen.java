@@ -1,18 +1,25 @@
-package com.example.floridamangamegooey;
+package ViewControllers;
 
+import Data.Player;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.floridamangamegooey.data.model.UserDatabase;
+import com.example.floridamangamegooey.R;
+
+import java.io.IOException;
+
+import Data.UserDatabase;
 
 public class LoginScreen extends AppCompatActivity {
     TextView inputUsername;
     TextView inputPassword;
+    Button loginButton;
 
 
     @Override
@@ -21,7 +28,13 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
         inputUsername = findViewById(R.id.loginUsername);
         inputPassword = findViewById(R.id.loginPassword);
-
+        loginButton = findViewById(R.id.loginButton);
+        Player p1 = new Player("tommy","caragolt");
+        try {
+            p1.savePlayer(getApplicationContext(),p1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void loginPress(View view) {

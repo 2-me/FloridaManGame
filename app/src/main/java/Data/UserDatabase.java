@@ -1,19 +1,21 @@
-package com.example.floridamangamegooey.data.model;
+package Data;
 
 import java.util.HashMap;
 
 public class UserDatabase {
-    private static HashMap<String, String> userDatabase;
-    private static HashMap<String, String> userLoginDatabase;  //username password
+    private static HashMap<Integer, Player> playerList; // playerID player
+    private static HashMap<String, Integer> playerIDList;  //username playerID
 
 
-    public static void loadUsers() {
+    public static void loadPlayers() {
         //Person objects
+        Player player1 = new Player("Tommy","caragolt");
 
-        userDatabase.put("Joey","saint123");
+        playerIDList.put("Joey","saint123");
     }
 
     public static boolean validateUser(String username, String password) {
+
         boolean validUsername = userLoginDatabase.containsKey(username);
         if(validUsername) {
             return (password.equals(userDatabase.get(username)));
@@ -21,5 +23,6 @@ public class UserDatabase {
         else
             return false;
     }
+
 
 }

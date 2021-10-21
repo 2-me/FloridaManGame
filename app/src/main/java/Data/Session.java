@@ -1,4 +1,4 @@
-package com.example.floridamangamegooey.data.model;
+package Data;
 
 public class Session {
 
@@ -16,12 +16,20 @@ public class Session {
         Session.password = password;
     }
 
-    public static void increaseCorrect() {
+    public static void addCorrect() {
         correct++;
     }
 
-    public static void increaseWrong() {
+    public static int getCorrect() {
+        return correct;
+    }
+
+    public static void addWrong() {
         wrong++;
+    }
+
+    public static int getWrong() {
+        return wrong;
     }
 
     private static String getName() {
