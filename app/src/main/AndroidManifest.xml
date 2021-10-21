@@ -23,7 +23,7 @@
         </intent-filter>
 
         <activity
-            android:name="ViewControllers.MainActivity2"
+            android:name="ViewControllers.Game"
             android:exported="true" />
     </application>
 
