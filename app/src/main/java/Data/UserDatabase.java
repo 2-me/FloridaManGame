@@ -9,16 +9,16 @@ public class UserDatabase {
 
     public static void loadPlayers() {
         //Person objects
-        Player player1 = new Player("Tommy","caragolt");
-
-        playerIDList.put("Joey","saint123");
+        Player p1 = new Player("Tommy","caragolt");
+        Player p2 = new Player("Joey","bestteacher");
+        Player p3 = new Player("Default","username");
     }
 
     public static boolean validateUser(String username, String password) {
-
-        boolean validUsername = userLoginDatabase.containsKey(username);
+        int playerID = playerIDList.get(username);
+        boolean validUsername = playerList.containsKey(username);
         if(validUsername) {
-            return (password.equals(userDatabase.get(username)));
+            return (password.equals(playerList.get(playerID).getPassword()));
         }
         else
             return false;

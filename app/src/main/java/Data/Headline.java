@@ -27,4 +27,6 @@ public class Headline {
         options.add(alternate1);
         Collections.shuffle(options);
     }
+
+
 }

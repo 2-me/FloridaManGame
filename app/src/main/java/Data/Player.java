@@ -11,6 +11,31 @@ import java.io.Serializable;
 public class Player implements Serializable {
     private Integer playerID;
     private String username;
+
+    public Integer getPlayerID() {
+        return playerID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public Integer getBestScore() {
+        return bestScore;
+    }
+
+    public static Integer getPlayerCount() {
+        return playerCount;
+    }
+
     private String password;
     private String fullName;
     private Integer bestScore = 0;
@@ -32,4 +57,6 @@ public class Player implements Serializable {
         os.close();
         fos.close();
     }
+
+
 }
