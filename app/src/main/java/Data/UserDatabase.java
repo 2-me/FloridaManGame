@@ -1,6 +1,7 @@
 package Data;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class UserDatabase {
     private static HashMap<Integer, Player> playerList; // playerID player
@@ -8,17 +9,23 @@ public class UserDatabase {
 
 
     public static void loadPlayers() {
-        //Person objects
         Player p1 = new Player("Tommy","caragolt");
+        playerIDList.put(p1.getUsername(),p1.getPlayerID());
+        playerList.put(p1.getPlayerID(),p1);
         Player p2 = new Player("Joey","bestteacher");
+        playerIDList.put(p2.getUsername(),p2.getPlayerID());
+        playerList.put(p2.getPlayerID(),p2);
         Player p3 = new Player("Default","username");
+        playerIDList.put(p3.getUsername(),p3.getPlayerID());
+        playerList.put(p3.getPlayerID(),p3);
+
     }
 
     public static boolean validateUser(String username, String password) {
-        int playerID = playerIDList.get(username);
-        boolean validUsername = playerList.containsKey(username);
+        boolean validUsername = playerIDList.containsKey(username);
         if(validUsername) {
-            return (password.equals(playerList.get(playerID).getPassword()));
+            int playerID = playerIDList.get(username);
+            return (Objects.equals(password,(playerList.get(playerID)).getPassword()));
         }
         else
             return false;

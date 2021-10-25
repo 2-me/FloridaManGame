@@ -29,12 +29,7 @@ public class LoginScreen extends AppCompatActivity {
         inputUsername = findViewById(R.id.loginUsername);
         inputPassword = findViewById(R.id.loginPassword);
         loginButton = findViewById(R.id.loginButton);
-        Player p1 = new Player("tommy","caragolt");
-        try {
-            p1.savePlayer(getApplicationContext(),p1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        UserDatabase.loadPlayers();
     }
 
     public void loginPress(View view) {

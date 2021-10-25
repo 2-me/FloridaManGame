@@ -84,11 +84,11 @@
 
             <TextView
                 android:id="@+id/headlineView"
-                android:layout_width="325dp"
-                android:layout_height="86dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Headline"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -114,10 +114,9 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ansButtonTR"
-                            android:layout_width="153dp"
-                            android:layout_height="65dp"
-                            android:insetRight="0"
+                            android:id="@+id/ansButtonTL"
+                            android:layout_width="150dp"
+                            android:layout_height="64dp"
                             android:text="Button" />
 
                         <TextView
@@ -125,14 +124,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="111111"
+                            android:text="       "
                             tools:visibility="invisible" />
 
                         <Button
-                            android:id="@+id/ansButtonTL"
+                            android:id="@+id/ansButtonTR"
                             android:layout_width="150dp"
                             android:layout_height="64dp"
                             android:text="Button" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -150,9 +150,9 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/ansButtonBR"
-                        android:layout_width="153dp"
-                        android:layout_height="65dp"
+                        android:id="@+id/ansButtonBL"
+                        android:layout_width="150dp"
+                        android:layout_height="64dp"
                         android:text="Button" />
 
                     <TextView
@@ -160,11 +160,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView"
+                        android:text="       "
                         tools:visibility="invisible" />
 
                     <Button
-                        android:id="@+id/ansButtonBL"
+                        android:id="@+id/ansButtonBR"
                         android:layout_width="150dp"
                         android:layout_height="64dp"
                         android:text="Button" />

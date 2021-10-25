@@ -13,6 +13,9 @@
             android:name="ViewControllers.GameOver"
             android:exported="false" />
         <activity
+            android:name="ViewControllers.Game"
+            android:exported="true" />
+        <activity
             android:name="ViewControllers.LoginScreen"
             android:exported="true" >
             <intent-filter>
@@ -21,9 +24,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="ViewControllers.Game"
-            android:exported="true" />
     </application>
-
 </manifest>

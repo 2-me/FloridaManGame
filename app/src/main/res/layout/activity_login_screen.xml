@@ -9,8 +9,8 @@
     <Button
         android:id="@+id/loginButton"
         android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="207dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="201dp"
         android:onClick="loadScreen"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,10 +63,10 @@
 
     <TextView
         android:id="@+id/loginTitle"
-        android:layout_width="244dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="85dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="45dp"
         android:text="Login Screen"
         android:textAlignment="center"
         android:textAllCaps="false"
