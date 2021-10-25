@@ -18,7 +18,6 @@ public class UserDatabase {
         Player p3 = new Player("Default","username");
         playerIDList.put(p3.getUsername(),p3.getPlayerID());
         playerList.put(p3.getPlayerID(),p3);
-
     }
 
     public static boolean validateUser(String username, String password) {

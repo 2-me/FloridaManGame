@@ -12,7 +12,11 @@ public class Headline {
     String alternate3;
     ArrayList<String> options;
     private int headlineNumber;
-    private static int headlineCount = 1;
+    public static int headlineCount = 1;
+
+    public int getHeadlineNumber() {
+        return headlineNumber;
+    }
 
     public Headline(String story, String keyword, String alternate1, String alternate2, String alternate3) {
         this.story = story;
@@ -22,6 +26,9 @@ public class Headline {
         this.alternate3 = alternate3;
         headlineNumber = headlineCount;
         headlineCount++;
+    }
+
+    public void optionShuffle(){
         options.add(alternate1);
         options.add(alternate1);
         options.add(alternate1);

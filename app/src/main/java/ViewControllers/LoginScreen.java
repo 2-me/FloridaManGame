@@ -1,6 +1,5 @@
 package ViewControllers;
 
-import Data.Player;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
