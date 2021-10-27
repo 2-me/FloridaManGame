@@ -11,6 +11,10 @@ import java.io.Serializable;
 public class Player implements Serializable {
     private Integer playerID;
     private String username;
+    private String password;
+    private String fullName;
+    private Integer bestScore = 0;
+    public static Integer playerCount = 1;
 
     public Integer getPlayerID() {
         return playerID;
@@ -35,12 +39,6 @@ public class Player implements Serializable {
     public static Integer getPlayerCount() {
         return playerCount;
     }
-
-    private String password;
-    private String fullName;
-    private Integer bestScore = 0;
-    public static Integer playerCount = 1;
-
 
     public Player(String fullName, String username){
         this.fullName = fullName;

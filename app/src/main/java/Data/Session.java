@@ -8,6 +8,10 @@ public class Session {
     private static String username;
     private static String password;
 
+    public static void setCurrentPlayer(Object currentPlayer) { CurrentPlayer = currentPlayer; }
+
+    private static Object CurrentPlayer;
+
     public static void setSessionUsername(String username) {
         Session.username = username;
     }

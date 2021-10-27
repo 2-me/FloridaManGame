@@ -21,10 +21,10 @@ public class UserDatabase {
     }
 
     public static boolean validateUser(String username, String password) {
-        boolean validUsername = playerIDList.containsKey(username);
-        if(validUsername) {
+        if(playerIDList.containsKey(username)) {
             int playerID = playerIDList.get(username);
-            return (Objects.equals(password,(playerList.get(playerID)).getPassword()));
+            Player holder = playerList.get(playerID);
+            return (Objects.equals(password,(holder.getPassword())));
         }
         else
             return false;
