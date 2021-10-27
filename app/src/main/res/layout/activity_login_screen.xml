@@ -11,7 +11,7 @@
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_marginBottom="201dp"
-        android:onClick="loadScreen"
+        android:onClick="loginPress"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

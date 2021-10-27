@@ -3,14 +3,15 @@ package Data;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public class Headline {
     String story;
-    String keyword;
-    String alternate1;
-    String alternate2;
-    String alternate3;
-    ArrayList<String> options;
+    public static String keyword;
+    public static String alternate1;
+    public static String alternate2;
+    public static String alternate3;
+    public static ArrayList<String> options;
     private int headlineNumber;
     public static int headlineCount = 1;
 
@@ -28,10 +29,11 @@ public class Headline {
         headlineCount++;
     }
 
-    public void optionShuffle(){
+    public static void optionsShuffle(){
         options.add(alternate1);
         options.add(alternate1);
         options.add(alternate1);
+        options.add(keyword);
         Collections.shuffle(options);
     }
 

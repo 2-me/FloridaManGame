@@ -43,9 +43,4 @@ public class LoginScreen extends AppCompatActivity {
         }
     }
 
-    public void loadScreen(View view) { //To have buttons able to call a method, the param must be (View view)
-        Intent intent = new Intent(this, Game.class);
-        startActivity(intent);
-    }
-
 }

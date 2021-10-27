@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Player implements Serializable {
     private Integer playerID;
@@ -46,6 +47,21 @@ public class Player implements Serializable {
         password = "saint123";
         this.playerID = playerCount;
         playerCount++;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return Objects.equals(playerID, player.playerID) && Objects.equals(username, player.username)
+                && Objects.equals(password, player.password) && Objects.equals(fullName, player.fullName)
+                && Objects.equals(bestScore, player.bestScore);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playerID);
     }
 
     public static void savePlayer(Context context, Player player) throws IOException {

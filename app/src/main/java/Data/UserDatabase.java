@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class UserDatabase {
-    private static HashMap<Integer, Player> playerList; // playerID player
-    private static HashMap<String, Integer> playerIDList;  //username playerID
+    private static HashMap<String, Integer> playerIDList = new HashMap<>();  //username playerID
+    private static HashMap<Integer, Player> playerList = new HashMap<>(); // playerID player
 
 
     public static void loadPlayers() {
@@ -23,8 +23,7 @@ public class UserDatabase {
     public static boolean validateUser(String username, String password) {
         if(playerIDList.containsKey(username)) {
             int playerID = playerIDList.get(username);
-            Player holder = playerList.get(playerID);
-            return (Objects.equals(password,(holder.getPassword())));
+            return (Objects.equals(password,(playerList.get(playerID)).getPassword()));
         }
         else
             return false;

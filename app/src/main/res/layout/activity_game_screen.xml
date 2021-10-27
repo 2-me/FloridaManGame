@@ -20,7 +20,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="1"
+            android:text="  "
             tools:visibility="invisible" />
 
         <TextView
@@ -123,6 +123,7 @@
                             android:id="@+id/ansButtonTL"
                             android:layout_width="150dp"
                             android:layout_height="64dp"
+                            android:onClick="answerClicked"
                             android:text="Button" />
 
                         <TextView
@@ -137,6 +138,7 @@
                             android:id="@+id/ansButtonTR"
                             android:layout_width="150dp"
                             android:layout_height="64dp"
+                            android:onClick="answerClicked"
                             android:text="Button" />
 
                     </LinearLayout>
@@ -159,6 +161,7 @@
                         android:id="@+id/ansButtonBL"
                         android:layout_width="150dp"
                         android:layout_height="64dp"
+                        android:onClick="answerClicked"
                         android:text="Button" />
 
                     <TextView
@@ -173,6 +176,7 @@
                         android:id="@+id/ansButtonBR"
                         android:layout_width="150dp"
                         android:layout_height="64dp"
+                        android:onClick="answerClicked"
                         android:text="Button" />
 
                 </LinearLayout>
@@ -229,23 +233,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/numScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Best Score: " />
-
-            <TextView
-                android:id="@+id/bestScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#3F51B5"
-                android:textSize="34sp" />
-
-        </LinearLayout>
+            android:gravity="center_horizontal"/>
 
     </LinearLayout>
 
