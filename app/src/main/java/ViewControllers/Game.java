@@ -14,7 +14,8 @@ import com.example.floridamangamegooey.R;
 
     public class Game extends AppCompatActivity {
         int questionNumber = 1;
-        Headline currentHeadline;
+        Headline currentHeadline = new Headline("a","a","a","a","a");
+        String temp;
         TextView correctNumber;
         TextView wrongNumber;
         TextView headlineView;
@@ -39,7 +40,10 @@ import com.example.floridamangamegooey.R;
             ansButtonBL = findViewById(R.id.ansButtonBL);
             ansButtonBR = findViewById(R.id.ansButtonBR);
             MyHeadlineBank.loadHeadlines();
-            totalNumberQues.setText(MyHeadlineBank.numOfHeadlines());
+            totalNumberQues.setText(String.valueOf(MyHeadlineBank.numOfHeadlines()));
+            currentHeadline = MyHeadlineBank.getNextHeadline(questionNumber);
+            Headline.optionsShuffle();
+            updateScreen();
         }
 
         public void loadNextHeadline(){
@@ -63,16 +67,18 @@ import com.example.floridamangamegooey.R;
             ansButtonTR.setText(Headline.options.remove(0));
             ansButtonBL.setText(Headline.options.remove(0));
             ansButtonBR.setText(Headline.options.remove(0));
+            headlineView.setText(currentHeadline.getStory());
             correctNumber.setText(Session.getCorrect());
             wrongNumber.setText(Session.getWrong());
-            questionNum.setTextSize(questionNumber);
-
+            questionNum.setText(String.valueOf(questionNumber));
+            Headline.emptyOptions();
         }
 
 
-        Toast toastCorrect = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT);
-        Toast toastWrong = Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_SHORT);
+
         public void answerClicked(View view) {
+            Toast toastCorrect = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT);
+            Toast toastWrong = Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_SHORT);
             Button buttonClicked = (Button) view;
             if ((buttonClicked.getText().toString()).equals(Headline.keyword)) {
                 Session.addCorrect();
