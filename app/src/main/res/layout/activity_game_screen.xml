@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2C2F33"
+    android:backgroundTint="#7289DA"
     tools:context="ViewControllers.Game">
 
     <LinearLayout
         android:id="@+id/vertConstraint"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#2C2F33"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +22,7 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:text="  "
             tools:visibility="invisible" />
 
@@ -27,9 +30,11 @@
             android:id="@+id/gameTitle"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            android:fontFamily="monospace"
             android:gravity="bottom"
             android:text="Florida Man Game"
             android:textAlignment="center"
+            android:textColor="#99AAB5"
             android:textSize="34sp" />
 
         <LinearLayout
@@ -42,12 +47,15 @@
                 android:id="@+id/correctTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Correct:     " />
+                android:fontFamily="monospace"
+                android:text="Correct: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/correctNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="0"
                 android:textColor="#4CAF50"
                 android:textSize="34sp" />
@@ -62,13 +70,16 @@
                 android:id="@+id/wrongTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wrong:     "
-                android:textAlignment="textStart" />
+                android:fontFamily="monospace"
+                android:text="Wrong: "
+                android:textAlignment="textStart"
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/wrongNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:gravity="right"
                 android:text="0"
                 android:textColor="#F44336"
@@ -92,9 +103,11 @@
                 android:id="@+id/headlineView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="monospace"
                 android:gravity="center"
                 android:text="Headline"
                 android:textAlignment="gravity"
+                android:textColor="#99AAB5"
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -123,6 +136,8 @@
                             android:id="@+id/ansButtonTL"
                             android:layout_width="150dp"
                             android:layout_height="64dp"
+                            android:backgroundTint="#5865F2"
+                            android:fontFamily="monospace"
                             android:onClick="answerClicked"
                             android:text="Button" />
 
@@ -138,6 +153,8 @@
                             android:id="@+id/ansButtonTR"
                             android:layout_width="150dp"
                             android:layout_height="64dp"
+                            android:backgroundTint="#5865F2"
+                            android:fontFamily="monospace"
                             android:onClick="answerClicked"
                             android:text="Button" />
 
@@ -161,6 +178,8 @@
                         android:id="@+id/ansButtonBL"
                         android:layout_width="150dp"
                         android:layout_height="64dp"
+                        android:backgroundTint="#5865F2"
+                        android:fontFamily="monospace"
                         android:onClick="answerClicked"
                         android:text="Button" />
 
@@ -176,6 +195,8 @@
                         android:id="@+id/ansButtonBR"
                         android:layout_width="150dp"
                         android:layout_height="64dp"
+                        android:backgroundTint="#5865F2"
+                        android:fontFamily="monospace"
                         android:onClick="answerClicked"
                         android:text="Button" />
 
@@ -185,47 +206,45 @@
 
         </TableLayout>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="     "
-            tools:visibility="invisible" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:layout_height="70dp"
+            android:gravity="bottom|center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/numQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Question: " />
+                android:fontFamily="monospace"
+                android:text="Question: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/questionNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="0"
-                android:textColor="#3F51B5"
+                android:textColor="#5865F2"
                 android:textSize="34sp" />
 
             <TextView
                 android:id="@+id/correctNumber8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="/"
-                android:textColor="#3F51B5"
+                android:textColor="#5865F2"
                 android:textSize="34sp" />
 
             <TextView
                 android:id="@+id/totalNumberQues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="16"
-                android:textColor="#3F51B5"
+                android:textColor="#5865F2"
                 android:textSize="34sp" />
 
         </LinearLayout>
@@ -233,7 +252,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal" />
 
     </LinearLayout>
 

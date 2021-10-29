@@ -61,10 +61,6 @@ public class Game extends AppCompatActivity {
            }
         }
 
-            //check if the stuff is valid
-            //loadNextHeadline
-            //updateScreen(currentHeadline)
-
         public void updateScreen() {
             ansButtonTL.setText(currentHeadline.options.remove(0));
             ansButtonTR.setText(currentHeadline.options.remove(0));
@@ -76,8 +72,6 @@ public class Game extends AppCompatActivity {
             questionNum.setText(String.valueOf(questionNumber));
             currentHeadline.emptyOptions();
         }
-
-
 
         public void answerClicked(View view) {
             Toast toastCorrect = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT);

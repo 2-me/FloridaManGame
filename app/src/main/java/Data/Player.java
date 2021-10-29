@@ -43,10 +43,10 @@ public class Player implements Serializable {
         return playerCount;
     }
 
-    public Player(String fullName, String username){
+    public Player(String fullName, String username, String password){
         this.fullName = fullName;
         this.username = username;
-        password = "a";
+        this.password = password;
         this.playerID = playerCount;
         playerCount++;
     }

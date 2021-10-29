@@ -37,6 +37,7 @@
                 android:id="@+id/gameOverText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:gravity="fill_horizontal"
                 android:text="Game Over"
                 android:textSize="48sp" />
@@ -53,12 +54,14 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="Username: " />
 
             <TextView
                 android:id="@+id/overUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="TextView" />
 
         </LinearLayout>
@@ -73,12 +76,14 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="Full Name: " />
 
             <TextView
                 android:id="@+id/overFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -92,12 +97,14 @@
                 android:id="@+id/overScoreText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="Current Score: " />
 
             <TextView
                 android:id="@+id/overScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="TextView" />
 
         </LinearLayout>
@@ -112,12 +119,14 @@
                 android:id="@+id/bestScoreText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="Best Score: " />
 
             <TextView
                 android:id="@+id/overBestScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="TextView" />
 
         </LinearLayout>
@@ -132,6 +141,7 @@
                 android:id="@+id/newGameButton"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:gravity="center"
                 android:onClick="newGame"
                 android:text="New Game" />
@@ -141,7 +151,8 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:onClick="signOut"
-                android:text="Sign Out" />
+                android:text="Sign Out"
+                android:fontFamily="monospace" />
         </LinearLayout>
 
     </LinearLayout>
