@@ -7,28 +7,28 @@ import java.util.List;
 
 public class Headline {
     String story;
-    public static String keyword;
+    public  String keyword;
 
-    public static String getKeyword() {
+    public  String getKeyword() {
         return keyword;
     }
 
-    public static String getAlternate1() {
+    public  String getAlternate1() {
         return alternate1;
     }
 
-    public static String getAlternate2() {
+    public  String getAlternate2() {
         return alternate2;
     }
 
-    public static String getAlternate3() {
+    public  String getAlternate3() {
         return alternate3;
     }
 
-    public static String alternate1;
-    public static String alternate2;
-    public static String alternate3;
-    public static ArrayList<String> options;
+    public  String alternate1;
+    public  String alternate2;
+    public  String alternate3;
+    public  ArrayList<String> options = new ArrayList<>();
     private final int headlineNumber;
     public static int headlineCount = 1;
 
@@ -40,24 +40,24 @@ public class Headline {
 
     public Headline(String story, String keyword, String alternate1, String alternate2, String alternate3) {
         this.story = story;
-        Headline.keyword = keyword;
-        Headline.alternate1 = alternate1;
-        Headline.alternate2 = alternate2;
-        Headline.alternate3 = alternate3;
+        this.keyword = keyword;
+        this.alternate1 = alternate1;
+        this.alternate2 = alternate2;
+        this.alternate3 = alternate3;
         headlineNumber = headlineCount;
         headlineCount++;
     }
 
-    public static ArrayList<String> optionsShuffle(){
+    public ArrayList<String> optionsShuffle(){
         options.add(keyword);
         options.add(alternate1);
-        options.add(alternate1);
+        options.add(alternate2);
         options.add(alternate3);
         Collections.shuffle(options);
         return options;
     }
 
-    public static void emptyOptions() {
+    public  void emptyOptions() {
         options = new ArrayList<>();
     }
 

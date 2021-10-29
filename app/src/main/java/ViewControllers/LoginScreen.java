@@ -19,7 +19,7 @@ public class LoginScreen extends AppCompatActivity {
     TextView inputUsername;
     TextView inputPassword;
     Button loginButton;
-
+    static String playerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class LoginScreen extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         Toast toast = Toast.makeText(getApplicationContext(), "Incorrect Username/Password", Toast.LENGTH_LONG);
         if (UserDatabase.validateUser(username,password)) {
+             playerName = username;
             startActivity(intent);
         } else {
             toast.show();

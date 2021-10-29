@@ -3,7 +3,7 @@ package Data;
 import java.util.HashMap;
 
 public class MyHeadlineBank {
-    private static HashMap<Integer, Headline> gameHeadlines = new HashMap<>();
+    public static HashMap<Integer, Headline> gameHeadlines = new HashMap<>();
 
 
     public static void loadHeadlines() {
@@ -34,7 +34,7 @@ public class MyHeadlineBank {
     }
 
     public static boolean outOfHeadlines(int headlineNumber) {
-        return headlineNumber <= gameHeadlines.size();
+        return headlineNumber < gameHeadlines.size();
     }
 
     public static int numOfHeadlines(){

@@ -1,20 +1,22 @@
 package ViewControllers;
 
-import Data.Headline;
-import Data.MyHeadlineBank;
-import Data.Session;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.example.floridamangamegooey.R;
 
-    public class Game extends AppCompatActivity {
+import Data.Headline;
+import Data.MyHeadlineBank;
+import Data.Session;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Game extends AppCompatActivity {
         int questionNumber = 1;
-        Headline currentHeadline = new Headline("a","a","a","a","a");
+        Headline currentHeadline;
         String temp;
         TextView correctNumber;
         TextView wrongNumber;
@@ -41,20 +43,20 @@ import com.example.floridamangamegooey.R;
             ansButtonBR = findViewById(R.id.ansButtonBR);
             MyHeadlineBank.loadHeadlines();
             totalNumberQues.setText(String.valueOf(MyHeadlineBank.numOfHeadlines()));
-            currentHeadline = MyHeadlineBank.getNextHeadline(questionNumber);
-            Headline.optionsShuffle();
+            currentHeadline = MyHeadlineBank.gameHeadlines.get(questionNumber);
+            currentHeadline.optionsShuffle();
             updateScreen();
         }
 
         public void loadNextHeadline(){
-           if(MyHeadlineBank.outOfHeadlines(questionNumber)) {
+           if(!MyHeadlineBank.outOfHeadlines(questionNumber)) {
                Intent intent = new Intent(this, GameOver.class);
                startActivity(intent);
            }
            else {
                questionNumber++;
-               currentHeadline = MyHeadlineBank.getNextHeadline(questionNumber);
-               Headline.optionsShuffle();
+               currentHeadline = MyHeadlineBank.gameHeadlines.get(questionNumber);
+               currentHeadline.optionsShuffle();
            }
         }
 
@@ -63,15 +65,15 @@ import com.example.floridamangamegooey.R;
             //updateScreen(currentHeadline)
 
         public void updateScreen() {
-            ansButtonTL.setText(Headline.options.remove(0));
-            ansButtonTR.setText(Headline.options.remove(0));
-            ansButtonBL.setText(Headline.options.remove(0));
-            ansButtonBR.setText(Headline.options.remove(0));
+            ansButtonTL.setText(currentHeadline.options.remove(0));
+            ansButtonTR.setText(currentHeadline.options.remove(0));
+            ansButtonBL.setText(currentHeadline.options.remove(0));
+            ansButtonBR.setText(currentHeadline.options.remove(0));
             headlineView.setText(currentHeadline.getStory());
-            correctNumber.setText(Session.getCorrect());
-            wrongNumber.setText(Session.getWrong());
+            correctNumber.setText(String.valueOf(Session.getCorrect()));
+            wrongNumber.setText(String.valueOf(Session.getWrong()));
             questionNum.setText(String.valueOf(questionNumber));
-            Headline.emptyOptions();
+            currentHeadline.emptyOptions();
         }
 
 
@@ -80,7 +82,7 @@ import com.example.floridamangamegooey.R;
             Toast toastCorrect = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT);
             Toast toastWrong = Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_SHORT);
             Button buttonClicked = (Button) view;
-            if ((buttonClicked.getText().toString()).equals(Headline.keyword)) {
+            if ((buttonClicked.getText().toString()).equals(currentHeadline.keyword)) {
                 Session.addCorrect();
                 toastCorrect.show();
             }

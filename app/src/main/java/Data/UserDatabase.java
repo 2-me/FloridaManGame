@@ -7,6 +7,10 @@ public class UserDatabase {
     private static HashMap<String, Integer> playerIDList = new HashMap<>();  //username playerID
     private static HashMap<Integer, Player> playerList = new HashMap<>(); // playerID player
 
+    public static Player getPlayer(String username) {
+        Integer playerID = playerIDList.get(username);
+        return playerList.get(playerID);
+    }
 
     public static void loadPlayers() {
         Player p1 = new Player("Tommy","caragolt");
@@ -18,6 +22,9 @@ public class UserDatabase {
         Player p3 = new Player("Default","username");
         playerIDList.put(p3.getUsername(),p3.getPlayerID());
         playerList.put(p3.getPlayerID(),p3);
+        Player p4 = new Player("Default","a");
+        playerIDList.put(p4.getUsername(),p4.getPlayerID());
+        playerList.put(p4.getPlayerID(),p4);
     }
 
     public static boolean validateUser(String username, String password) {

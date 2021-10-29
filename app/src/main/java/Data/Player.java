@@ -44,7 +44,7 @@ public class Player implements Serializable {
     public Player(String fullName, String username){
         this.fullName = fullName;
         this.username = username;
-        password = "saint123";
+        password = "a";
         this.playerID = playerCount;
         playerCount++;
     }
