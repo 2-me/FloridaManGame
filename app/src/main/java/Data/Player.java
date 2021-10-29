@@ -17,6 +17,8 @@ public class Player implements Serializable {
     private Integer bestScore = 0;
     public static Integer playerCount = 1;
 
+    public void setBestScore(Integer bestScore) { this.bestScore = bestScore; }
+
     public Integer getPlayerID() {
         return playerID;
     }
@@ -64,7 +66,7 @@ public class Player implements Serializable {
         return Objects.hash(playerID);
     }
 
-    public static void savePlayer(Context context, Player player) throws IOException {
+    public void savePlayer(Context context, Player player) throws IOException {
         FileOutputStream fos = context.openFileOutput("plater.dat", Context.MODE_PRIVATE);
         ObjectOutputStream os = new ObjectOutputStream(fos);
         os.writeObject(player);

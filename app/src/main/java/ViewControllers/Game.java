@@ -57,6 +57,7 @@ public class Game extends AppCompatActivity {
                questionNumber++;
                currentHeadline = MyHeadlineBank.gameHeadlines.get(questionNumber);
                currentHeadline.optionsShuffle();
+               updateScreen();
            }
         }
 
@@ -91,7 +92,6 @@ public class Game extends AppCompatActivity {
                 Session.addWrong();
             } //answer checked
             loadNextHeadline();
-            updateScreen();
         }
 
     }
