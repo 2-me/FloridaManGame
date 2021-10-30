@@ -1,5 +1,7 @@
 package ViewControllers;
 
+import Data.Headline;
+import Data.MyHeadlineBank;
 import Data.Player;
 import Data.Session;
 import Data.UserDatabase;
@@ -49,13 +51,19 @@ public class GameOver extends AppCompatActivity {
     }
 
     public void signOut(View view) {
-        Intent intent = new Intent(this, LoginScreen.class);
-        startActivity(intent);
+        Intent toLogin = new Intent(this, LoginScreen.class);
+        MyHeadlineBank.emptyGameHeadlines();
+        Headline.resetHeadlineCount();
+        Session.resetSessionData();
+        startActivity(toLogin);
     }
 
     public void newGame(View view) {
-        Intent intent = new Intent(this, Game.class);
-        startActivity(intent);
+        Intent newGame = new Intent(this, Game.class);
+        MyHeadlineBank.emptyGameHeadlines();
+        Headline.resetHeadlineCount();
+        Session.resetSessionData();
+        startActivity(newGame);
     }
 
 }

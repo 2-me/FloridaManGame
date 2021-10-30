@@ -36,7 +36,16 @@ public class Session {
         return wrong;
     }
 
+    public static void resetCorrect() { correct = 0; }
+
+    public static void resetWrong() { wrong = 0; }
+
     private static String getName() {
         return name;
+    }
+
+    public static void resetSessionData(){
+        Session.resetCorrect();
+        Session.resetWrong();
     }
 }

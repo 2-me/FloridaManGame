@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2C2F33"
+    android:backgroundTint="#2C2F33"
     tools:context="ViewControllers.GameOver">
 
     <LinearLayout
@@ -40,6 +42,7 @@
                 android:fontFamily="monospace"
                 android:gravity="fill_horizontal"
                 android:text="Game Over"
+                android:textColor="#99AAB5"
                 android:textSize="48sp" />
 
         </LinearLayout>
@@ -55,14 +58,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="Username: " />
+                android:text="Username: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/overUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#99AAB5" />
 
         </LinearLayout>
 
@@ -77,14 +82,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="Full Name: " />
+                android:text="Full Name: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/overFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#99AAB5" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,14 +105,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="Current Score: " />
+                android:text="Current Score: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/overScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#99AAB5" />
 
         </LinearLayout>
 
@@ -120,14 +129,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="Best Score: " />
+                android:text="Best Score: "
+                android:textColor="#99AAB5" />
 
             <TextView
                 android:id="@+id/overBestScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#99AAB5" />
 
         </LinearLayout>
 
@@ -141,18 +152,22 @@
                 android:id="@+id/newGameButton"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#5865F2"
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:onClick="newGame"
-                android:text="New Game" />
+                android:text="New Game"
+                android:textColor="#99AAB5" />
 
             <Button
                 android:id="@+id/signOutButton"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#5865F2"
+                android:fontFamily="monospace"
                 android:onClick="signOut"
                 android:text="Sign Out"
-                android:fontFamily="monospace" />
+                android:textColor="#99AAB5" />
         </LinearLayout>
 
     </LinearLayout>

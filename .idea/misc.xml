@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/carag/StudioProjects/FloridaManGame/app/src/main/res/layout/activity_game_over.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/carag/StudioProjects/FloridaManGame/app/src/main/res/layout/activity_game_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/carag/StudioProjects/FloridaManGame/app/src/main/res/layout/activity_login_screen.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/activity_game_over.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_game_screen.xml" value="0.232421875" />
         <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.221875" />

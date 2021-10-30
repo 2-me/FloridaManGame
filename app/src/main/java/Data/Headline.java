@@ -48,19 +48,21 @@ public class Headline {
         headlineCount++;
     }
 
-    public ArrayList<String> optionsShuffle(){
+    public void optionsShuffle(){
+        emptyOptions();
         options.add(keyword);
         options.add(alternate1);
         options.add(alternate2);
         options.add(alternate3);
         Collections.shuffle(options);
-        return options;
     }
 
     public  void emptyOptions() {
-        options = new ArrayList<>();
+        options.clear();
     }
 
-
+    public static void resetHeadlineCount() {
+        headlineCount = 0;
+    }
 
 }

@@ -27,6 +27,26 @@ public class MyHeadlineBank {
         gameHeadlines.put(gator.getHeadlineNumber(),gator);
         Headline tutu = new Headline("______ Wearing Florida Man Breaks into Farmers Market", "Tutu", "Balaclava", "Dog", "Cat");
         gameHeadlines.put(tutu.getHeadlineNumber(),tutu);
+        Headline manatee = new Headline("Florida Man Saves Drowning _______ After it Ate ‘Toxic Red Tide Seagrass’", "Manatee", "Gator", "Iguana", "Lionfish");
+        gameHeadlines.put(manatee.getHeadlineNumber(),manatee);
+        Headline grenade = new Headline("________ Found During Florida Man Traffic Stop", "Grenade", "Bazooka", "Cocaine", "Fentanyl");
+        gameHeadlines.put(grenade.getHeadlineNumber(),grenade);
+        Headline cat = new Headline("Florida Man Shoots, Kills Neighbor in Fight Over _______", "Cat", "Chess Match", "Property Line", "Weather");
+        gameHeadlines.put(cat.getHeadlineNumber(),cat);
+        Headline child = new Headline("Florida Man Arrested in Apparent Plot to Kidnap ________", "Child", "Succulent", "Car", "Left Arm");
+        gameHeadlines.put(child.getHeadlineNumber(),child);
+        Headline lawnMower = new Headline("Florida Man Seen Riding _______ to a 7-Eleven", "Lawn Mower", "Gator", "Tractor", "Panther");
+        gameHeadlines.put(lawnMower.getHeadlineNumber(),lawnMower);
+        Headline drone = new Headline("Florida Man Indicted for _______ Law Enforcement Drone", "Shooting", "Licking", "Stealing", "Mating With");
+        gameHeadlines.put(drone.getHeadlineNumber(),drone);
+        Headline fiance = new Headline("Florida Man Accused of Killing ________ and ‘Staging’ Body in Walmart Parking Lot", "Fiance", "Dog", "Daughter", "Employee");
+        gameHeadlines.put(fiance.getHeadlineNumber(),fiance);
+        Headline disney = new Headline("Florida Man Arrested for Threatening _______ on Twitter", "Disney", "Ex", "Boss", "Himself");
+        gameHeadlines.put(disney.getHeadlineNumber(),disney);
+        Headline newYork = new Headline("Florida Man Attempts Floating to _______ in Home-made Contraption", "New York", "France", "Mexico", "China");
+        gameHeadlines.put(newYork.getHeadlineNumber(),newYork);
+        Headline stomp = new Headline("Florida Man _____ Stolen Gator to “Teach It a Lesson”", "Stomps", "Scolds", "Beats", "Lectures");
+        gameHeadlines.put(stomp.getHeadlineNumber(),stomp);
     }
 
     public static Headline getNextHeadline(int headlineNumber) {
@@ -41,6 +61,8 @@ public class MyHeadlineBank {
         return gameHeadlines.size();
     }
 
-
+    public static void emptyGameHeadlines() {
+        gameHeadlines.clear();
+    }
 
 }

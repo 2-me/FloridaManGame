@@ -50,8 +50,9 @@ public class Game extends AppCompatActivity {
 
         public void loadNextHeadline(){
            if(!MyHeadlineBank.outOfHeadlines(questionNumber)) {
-               Intent intent = new Intent(this, GameOver.class);
-               startActivity(intent);
+               Intent toEnd = new Intent(this, GameOver.class);
+               currentHeadline.emptyOptions();
+               startActivity(toEnd);
            }
            else {
                questionNumber++;
