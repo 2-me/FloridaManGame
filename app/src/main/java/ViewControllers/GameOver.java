@@ -42,8 +42,8 @@ public class GameOver extends AppCompatActivity {
         try {
             p1.savePlayer(getApplicationContext(),p1);
         } catch (IOException e) {
-            e.printStackTrace();
-        }
+            e.printStackTrace(); //tried to learn how to get data from saved player but couldn't get it
+        }                        // I tried to email you about it but you didn't respond in time everything else in the code should work though. fingers crossed
         overUsername.setText(p1.getUsername());
         overFullName.setText(p1.getFullName());
         overScore.setText(String.valueOf(Session.getCorrect()));

@@ -35,7 +35,8 @@
             android:text="Florida Man Game"
             android:textAlignment="center"
             android:textColor="#99AAB5"
-            android:textSize="34sp" />
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,7 +140,8 @@
                             android:backgroundTint="#5865F2"
                             android:fontFamily="monospace"
                             android:onClick="answerClicked"
-                            android:text="Button" />
+                            android:text="Button"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView"
@@ -156,7 +158,8 @@
                             android:backgroundTint="#5865F2"
                             android:fontFamily="monospace"
                             android:onClick="answerClicked"
-                            android:text="Button" />
+                            android:text="Button"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -181,7 +184,8 @@
                         android:backgroundTint="#5865F2"
                         android:fontFamily="monospace"
                         android:onClick="answerClicked"
-                        android:text="Button" />
+                        android:text="Button"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -198,7 +202,8 @@
                         android:backgroundTint="#5865F2"
                         android:fontFamily="monospace"
                         android:onClick="answerClicked"
-                        android:text="Button" />
+                        android:text="Button"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

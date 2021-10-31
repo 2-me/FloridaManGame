@@ -62,7 +62,7 @@ public class Headline {
     }
 
     public static void resetHeadlineCount() {
-        headlineCount = 0;
+        headlineCount = 1;
     }
 
 }

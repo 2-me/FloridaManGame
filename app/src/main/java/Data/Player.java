@@ -3,8 +3,12 @@ package Data;
 import android.content.Context;
 import android.util.Log;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Objects;
@@ -67,12 +71,25 @@ public class Player implements Serializable {
     }
 
     public void savePlayer(Context context, Player player) throws IOException {
-        FileOutputStream fos = context.openFileOutput("plater.dat", Context.MODE_PRIVATE);
+        FileOutputStream fos = context.openFileOutput("player.dat", Context.MODE_PRIVATE);
         ObjectOutputStream os = new ObjectOutputStream(fos);
         os.writeObject(player);
         os.close();
         fos.close();
     }
 
+   /* public Player getPlayerData(Context context, Player player) throws IOException {
+        FileInputStream fis = new FileInputStream();
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Player playerData = null;
+        try {
+            playerData = (Player) ois.readObject();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        ois.close();
+        fis.close();
+        return playerData;
+    } */
 
 }
